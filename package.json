@@ -11,7 +11,7 @@
     "dev": "concurrently \"nodemon server/server.js\" \"cd client && npm run start\"",
     "build": "cd client && npm build",
     "start": "node server/server.js",
-    "heroku-postbuild": "cd client && npm install react-scripts --save && cd .. && NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
